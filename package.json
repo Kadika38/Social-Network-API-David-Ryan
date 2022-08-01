@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node utils/seed"
+  },
+  "name": "social-network-api-david-ryan",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kadika38/Social-Network-API-David-Ryan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kadika38/Social-Network-API-David-Ryan/issues"
+  },
+  "homepage": "https://github.com/Kadika38/Social-Network-API-David-Ryan#readme"
+}
