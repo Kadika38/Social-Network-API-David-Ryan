@@ -10,7 +10,6 @@ const userSchema = new Schema(
         ref: 'user',
       },
     ],
-    //here will be thoughts
   },
   {
     /* toJSON: {
@@ -21,6 +20,8 @@ const userSchema = new Schema(
 );
 
 // TODO: make a friendcount virtual
+
+// TODO: make a thoughts virtual
 
 // Initialize our User model
 const User = model('user', userSchema);
