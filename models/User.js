@@ -1,6 +1,5 @@
 const { Schema, model } = require('mongoose');
 
-// Schema to create User model
 const userSchema = new Schema(
   {
     username: String,
@@ -11,6 +10,7 @@ const userSchema = new Schema(
         ref: 'user',
       },
     ],
+    //here will be thoughts
   },
   {
     /* toJSON: {
