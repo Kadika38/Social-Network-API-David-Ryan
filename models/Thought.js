@@ -1,15 +1,11 @@
 const { Schema, model } = require('mongoose');
+const Reaction = require('./Reaction');
 
 const thoughtSchema = new Schema(
     {
       thoughtText: String,
       username: String,
-      reactions: [
-        {
-          type: Schema.Types.ObjectId,
-          ref: 'reaction',
-        },
-      ],
+      reactions: [Reaction],
     },
     {
       /* toJSON: {

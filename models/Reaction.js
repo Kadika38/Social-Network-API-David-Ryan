@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const reactionSchema = new Schema(
     {
-      reactionsText: String,
+      reactionText: String,
       username: String,
     },
     {
@@ -13,6 +13,4 @@ const reactionSchema = new Schema(
     }
   );
   
-  const Reaction = model('reaction', reactionSchema);
-  
-  module.exports = Reaction;
+  module.exports = reactionSchema;
