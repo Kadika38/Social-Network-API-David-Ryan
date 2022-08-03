@@ -1,5 +1,6 @@
 const Thought = require('../models/Thought');
 const Reaction = require('../models/Reaction');
+const User = require('../models/User');
 
 module.exports = {
     getThoughts(req, res) {
@@ -18,7 +19,18 @@ module.exports = {
     },
     createThought(req, res) {
         Thought.create(req.body)
-            .then((dbThoughtData) => res.json(dbThoughtData))
+            .then((dbThoughtData) => {
+                User.findOneAndUpdate(
+                    {username: dbThoughtData.username},
+                    {$addToSet: {thoughts: {_id: dbThoughtData._id}}},
+                    { runValidators: true, new: true }
+                )
+                .then((dbUserData) => 
+                    !dbUserData
+                        ? res.status(404).json({message: 'No user with this id!'})
+                        : res.json(dbUserData)
+                )
+            })
             .catch((err) => res.status(500).json(err));
     },
     updateThought(req, res) {
