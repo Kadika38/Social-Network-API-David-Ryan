@@ -11,7 +11,7 @@
     
     
 ## Description
-
+This is an example backend for a social network.  User accounts can be created, updated, and deleted.  Users can create Thoughts (i.e. posts).  These thoughts can be updated and deleted.  Thoughts also have Reactions (i.e. comments).  Reactions can be created and deleted.  There are routes for seeing all users or all thoughts, a single user, a single thought.  This is just backend.  There isn't an associated front end.  Just proof that I can build a simple backend project using MongoDb and Mongoose.
 
 
 ## Deployment
